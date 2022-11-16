@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <ol>
+            <li>test 1</li>
+            <li>test 2</li>
+            <li>test 3</li>
+        </ol>
+        <ul>
+            <li>HTML</li>
+            <li class="active">CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <p>test 1</p>
+        <p>test 2</p>
+        <p>test 3</p>
+        <script>
+            const li = document.querySelector("li");
+            li.style.color = "red";
+            const li2 = document.querySelector(".active");
+            li2.style.color = "blue";
+            const p = document.querySelectorAll("p");
+            for (const property in p) {
+                p[property].style.color = "skyblue";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <a href="#" id="anchor">link</a>
+        <ul>
+            <li>test 1</li>
+            <li>test 2</li>
+            <li id="list">test 3</li>
+        </ul>
+        <input type="button" id="button" value="button" />
+        <script>
+            const target = document.getElementById("anchor");
+            console.log(li.constructor.name); //HTMLAnchorElement
+
+            const target2 = document.getElementById("list");
+            console.log(target2.constructor.name); //HTMLLIElement
+
+            const target3 = document.getElementById("button");
+            console.log(target3.constructor.name); //HTMLInputElement
+        </script>
+    </body>
+</html>
