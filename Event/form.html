@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form id="target" action="event.html">
+            <label for="name">SUBMIT</label> <input id="name" type="name" />
+            <input type="submit" />
+        </form>
+        <script>
+            const t = document.getElementById("target");
+            t.addEventListener("submit", function (event) {
+                if (document.getElementById("name").value.length === 0) {
+                    alert("Name 필드의 값이 누락 되었습니다");
+                    event.preventDefault();
+                }
+            });
+        </script>
+
+        <p id="result"></p>
+        <label for="name2">CHANGE</label>
+        <input id="target1" type="name2" />
+        <script>
+            const t1 = document.getElementById("target1");
+            t1.addEventListener("change", function (event) {
+                document.getElementById("result").innerHTML =
+                    event.target.value;
+            });
+        </script>
+
+        <br />
+        <br />
+
+        <label for="name3">BLUR, FOCUS</label>
+        <input id="target2" type="name3" />
+        <script>
+            const t2 = document.getElementById("target2");
+            t2.addEventListener("blur", function (event) {
+                alert("blur");
+            });
+            t2.addEventListener("focus", function (event) {
+                alert("focus");
+            });
+        </script>
+    </body>
+</html>

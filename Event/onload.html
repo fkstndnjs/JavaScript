@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- DOMContentLoaded는 문서에 있는 태그들만 먼저 로딩하고 실행되는 이벤트 -->
+        <!-- load는 문서안에 있는 모든 리소스까지 로딩이 되면 실행되는 이벤트 -->
+        <!-- 따라서 리소스가 로딩되기 전에 빨리 실행해야할 이벤트가 있으면 DOMContentLoaded 이벤트를 써야함 -->
+        <script>
+            window.addEventListener("load", function () {
+                console.log("load");
+            });
+
+            window.addEventListener("DOMContentLoaded", function () {
+                console.log("DOMContentLoaded");
+            });
+        </script>
+    </head>
+    <body>
+        <p id="target">Hello</p>
+        <img src="#" alt="ysh" />
+    </body>
+</html>
